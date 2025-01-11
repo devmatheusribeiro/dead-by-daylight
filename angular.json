@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "dbd",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -32,7 +32,8 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles/normalize.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
