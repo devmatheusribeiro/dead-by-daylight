@@ -1,5 +1,4 @@
-@import './variables/colors';
-@import './variables/colors';
+@use './variables/colors' as colors;
 
 * {
   margin: 0;
@@ -60,6 +59,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  color: #333;
-  background-color: #fff;
+  color: colors.$neutral-white;
+  background-color: colors.$gray-900;
 }

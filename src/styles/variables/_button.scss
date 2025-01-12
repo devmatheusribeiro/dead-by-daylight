@@ -1,0 +1,40 @@
+@use './colors' as colors;
+
+@mixin button-style() {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.btn-primary {
+  display: block;
+  color: colors.$neutral-white;
+  background-color: colors.$primary-red;
+  width: fit-content;
+}
+
+.btn-sm {
+  display: block;
+  padding: 0.75rem 2rem;
+  width: fit-content;
+}
+
+.btn-md {
+  display: block;
+  padding: 1.125rem 3rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  width: fit-content;
+}
+
+.btn-lg {
+  display: block;
+  padding: 1.125rem 3.687rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  width: fit-content;
+}
+

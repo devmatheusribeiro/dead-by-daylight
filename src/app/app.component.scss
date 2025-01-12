@@ -1,3 +1,19 @@
 .dbd-page-container {
   position: relative;
+
+  .dbd-page-header {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+
+    width: 100%;
+  }
+
+  .dbd-page-body {
+    width: 100%;
+  }
+
+  .dbd-page-footer {
+    width: 100%;
+  }
 }

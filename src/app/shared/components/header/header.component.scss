@@ -1,0 +1,16 @@
+@use '../../../../styles/variables/colors' as colors;
+
+.header {
+  height: 84px;
+  background-color: rgba(colors.$gray-800, 0.5);
+
+  .header-wrapper {
+    height: 100%;
+    margin: 0 4.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+}
