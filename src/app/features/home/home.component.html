@@ -1,0 +1,134 @@
+<main class="page">
+  <section class="hero">
+    <div class="page-wrapper">
+      <div class="page-wrapper__left">
+        <div class="page-title">
+          <img ngSrc="https://ik.imagekit.io/mnbb48o/images/png/logo-text.png?updatedAt=1736896860576" alt="" priority width="746" height="166">
+        </div>
+        <div class="page-subtitle text-xl font-normal">
+          Em Dead by Daylight, persiga, corte e sacrifique sua presa como um assassino monstruoso ou junte-se a uma
+          equipe de quatro sobreviventes astutos trabalhando juntos para escapar.
+        </div>
+        <div class="pay-link">
+          <a class="btn-primary btn-lg">Compre o jogo principal</a>
+        </div>
+      </div>
+      <div class="page-wrapper__right">
+        <div class="miniature">
+          <img src="https://ik.imagekit.io/mnbb48o/images/banners/miniature.jpeg?updatedAt=1736896883505" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="platforms">
+    <div class="page-wrapper">
+      <div class="page-wrapper__left">
+        <p class="display-lg font-semi-bold">
+          Bem vindo ao jogo mortal de esconde-esconde
+        </p>
+      </div>
+      <div class="page-wrapper__right">
+        <ul class="list">
+          <li class="list-item"><img src="https://ik.imagekit.io/mnbb48o/images/svg/nintendo.svg?updatedAt=1736896857339" alt="" class="icon" loading="lazy"></li>
+          <li class="list-item"><img src="https://ik.imagekit.io/mnbb48o/images/svg/xbox.svg?updatedAt=1736896859316" alt="" class="icon" loading="lazy"></li>
+          <li class="list-item"><img src="https://ik.imagekit.io/mnbb48o/images/svg/playstation.svg?updatedAt=1736896858752" alt="" class="icon" loading="lazy"></li>
+          <li class="list-item"><img src="https://ik.imagekit.io/mnbb48o/images/svg/computer.svg?updatedAt=1736896857031" alt="" class="icon" loading="lazy"></li>
+          <li class="list-item"><img src="https://ik.imagekit.io/mnbb48o/images/svg/Vector.svg?updatedAt=1736896859142" alt="" class="icon" loading="lazy"></li>
+          <li class="list-item"><img src="https://ik.imagekit.io/mnbb48o/images/svg/epic.svg?updatedAt=1736896857105" alt="" class="icon" loading="lazy"></li>
+          <li class="list-item"><img src="https://ik.imagekit.io/mnbb48o/images/svg/Microsoft%20logo.svg?updatedAt=1736896857337" alt="" class="icon" loading="lazy"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="role">
+    <div class="page-wrapper">
+      <div class="page-wrapper__left">
+        <div class="card role-card-left">
+          <div class="header">
+            <span class="icon">
+              <img src="https://ik.imagekit.io/mnbb48o/images/svg/assassino%201.svg?updatedAt=1736896858361" alt="" loading="lazy">
+            </span>
+            <h3 class="display-lg font-semi-bold role-type">Jogue como <br /> Um assassino(Solo)</h3>
+          </div>
+          <div class="body">
+            <div class="character-image">
+              <img src="https://ik.imagekit.io/mnbb48o/images/png/ghost-face.png?updatedAt=1736896859647" alt="" loading="lazy">
+            </div>
+            <div class="character-image">
+              <img src="https://ik.imagekit.io/mnbb48o/images/png/saw.png?updatedAt=1736896861416" alt="" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-wrapper__right">
+        <div class="card role-card-right">
+          <div class="header">
+            <span class="icon">
+              <img src="https://ik.imagekit.io/mnbb48o/images/svg/sobrevivente%201.svg?updatedAt=1736896859220" alt="" loading="lazy">
+            </span>
+            <h3 class="display-lg font-semi-bold role-type">Jogue como <br /> Um sobrevivente(Co-op)</h3>
+          </div>
+          <div class="body">
+            <div class="character-image">
+              <img src="https://ik.imagekit.io/mnbb48o/images/png/resident-evil.png?updatedAt=1736896861713" alt="" loading="lazy">
+            </div>
+            <div class="character-image">
+              <img src="https://ik.imagekit.io/mnbb48o/images/png/silent-hill.png?updatedAt=1736896861438" alt="" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="role-footer page-wrapper">
+      <p class="display-lg font-semi-bold">
+        O único jogo onde as maiores franquias do terror colidem
+      </p>
+      <div class="page-wrapper__pay-link">
+        <a class="btn-primary btn-lg" [routerLink]="'/game/characters'" routerLinkActive="btn--active"
+          [attr.aria-current]="'page'" [routerLinkActiveOptions]="{ exact: true }">Ver todos os personagens</a>
+      </div>
+    </div>
+  </section>
+  <section class="maps">
+    <div class="page-wrapper">
+      <div class="header">
+        <h2 class="display-3xl font-semi-bold">Explore mais de 15 mapas de arrepiar</h2>
+      </div>
+      @defer (when isLoaded) {
+        <dbd-slider [data]="data()"></dbd-slider>
+      } @loading (minimum 1s) {
+        <div class="loading-wrapper">
+          <img src="https://ik.imagekit.io/mnbb48o/images/svg/logo.svg?updatedAt=1736896857089" alt="" class="loading-image" loading="lazy">
+        </div>
+      }
+    </div>
+  </section>
+  <section class="play-now">
+    <div class="page-wrapper">
+      <h2 class="title display-3xl font-semi-bold">Jogue Dead By <br />Daylight hoje</h2>
+      <ul class="list">
+        <li class="list-item">
+          <span class="icon">
+            <img src="https://ik.imagekit.io/mnbb48o/images/svg/alvo.svg?updatedAt=1736896856594" alt="" loading="lazy">
+          </span>
+          <p class="text-lg font-normal">Divirta-se sobrevivendo ou caçando</p>
+        </li>
+        <li class="list-item">
+          <span class="icon">
+            <img src="https://ik.imagekit.io/mnbb48o/images/svg/conect.svg?updatedAt=1736896856800" alt="" loading="lazy">
+          </span>
+          <p class="text-lg font-normal">Conecte-se com seus amigos</p>
+        </li>
+        <li class="list-item">
+          <span class="icon">
+            <img src="https://ik.imagekit.io/mnbb48o/images/svg/envelope.svg?updatedAt=1736896856782" alt="" loading="lazy">
+          </span>
+          <p class="text-lg font-normal">Compre coleções de personagens e mapas</p>
+        </li>
+      </ul>
+      <div class="page-wrapper__pay-link">
+        <a class="btn-primary btn-lg">Adquirir agora</a>
+      </div>
+    </div>
+  </section>
+</main>

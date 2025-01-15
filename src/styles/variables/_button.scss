@@ -14,6 +14,11 @@
   color: colors.$neutral-white;
   background-color: colors.$primary-red;
   width: fit-content;
+  transition: all .3s;
+
+  &:hover {
+    background-color: colors.$dark-red;
+  }
 }
 
 .btn-sm {
