@@ -33,7 +33,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/styles/normalize.scss"
+              "src/styles/normalize.scss",
+              "src/styles/fonts.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
