@@ -1,21 +1,25 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { LayoutService } from '../../../core/services/layout.service';
+import { Component, signal, WritableSignal } from '@angular/core';
+import { NavigationEnd, RouterModule, Router } from '@angular/router';
+import { filter } from 'rxjs';
+import { NgOptimizedImage } from '@angular/common';
+import { ILogo } from './logo.interface';
 
 @Component({
   selector: 'dbd-header',
-  imports: [RouterModule],
+  imports: [RouterModule, NgOptimizedImage],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  protected logoUrl: string = '';
+  protected isTextLogo: WritableSignal<boolean> = signal(false);
 
-  constructor(private layoutService: LayoutService) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.layoutService.logo$.subscribe((logoUrl: string) => {
-      this.logoUrl = logoUrl;
-    });
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+     this.isTextLogo.set(this.router.url != '/')
+    })
   }
 }

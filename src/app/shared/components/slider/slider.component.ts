@@ -1,9 +1,10 @@
 import { Component, input, signal, SimpleChanges, WritableSignal } from '@angular/core';
 import { ISlider } from './slider.interface';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'dbd-slider',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss'
 })

@@ -5,6 +5,7 @@ import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
 import { ImagekitioAngularModule } from 'imagekitio-angular';
+import { provideImageKitLoader, provideImgixLoader } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -12,12 +13,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
     provideHttpClient(),
-    {
-      provide: ImagekitioAngularModule,
-      useFactory: () => ImagekitioAngularModule.forRoot({
-        urlEndpoint: 'https://ik.imagekit.io/mnbb48o/',
-        publicKey: 'public_T3ia9UetbANovbe4PzY6FjQUC/g=',
-      }),
-    }
+    provideImageKitLoader('https://ik.imagekit.io/mnbb48o/'),
   ]
 };
