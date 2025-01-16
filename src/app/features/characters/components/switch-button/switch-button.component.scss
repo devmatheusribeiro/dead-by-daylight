@@ -1,0 +1,29 @@
+@use '../../../../../styles/variables/colors' as colors;
+
+.switch-wrapper {
+  width: fit-content;
+
+  display: flex;
+
+  .btn {
+    color: colors.$neutral-white;
+    border: 1px solid colors.$gray-500;
+
+    &.active {
+      background-color: colors.$primary-red;
+      border-color: colors.$primary-red;
+    }
+  }
+
+  &__left {
+    .btn:not(.active) {
+      border-right: none;
+    }
+  }
+
+  &__right {
+    .btn:not(.active) {
+      border-left: none;
+    }
+  }
+}

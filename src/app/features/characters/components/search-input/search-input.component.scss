@@ -1,0 +1,31 @@
+@use '../../../../../styles/variables/colors' as colors;
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+
+  color: colors.$gray-400;
+  border: 1px solid colors.$gray-500;
+
+  position: relative;
+
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.search-icon {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  right: 20px;
+  top: 0;
+  pointer-events: none;
+}
+
+.search-icon svg {
+  width: 21px;
+  height: 21px;
+}

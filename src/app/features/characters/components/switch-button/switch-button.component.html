@@ -1,0 +1,20 @@
+<div class="switch">
+  <div class="switch-wrapper">
+    <div class="switch-wrapper__left">
+      <button
+        class="btn btn-md"
+        [ngClass]="{'active': activeItem() == characterType.ASSASSIN}"
+        (click)="handleCharacter(characterType.ASSASSIN)"
+        aria-label="exibir personagens do tipo assassino"
+      >Assassino</button>
+    </div>
+    <div class="switch-wrapper__right">
+      <button
+        class="btn btn-md"
+        [ngClass]="{'active': activeItem() == characterType.SURVIVOR}"
+        (click)="handleCharacter(characterType.SURVIVOR)"
+        aria-label="exibir personagens do tipo sobrevivente"
+      >Sobrevivente</button>
+    </div>
+  </div>
+</div>
