@@ -1,7 +1,7 @@
 @use '../../../../styles/variables/colors' as colors;
 
   .footer-wrapper {
-    padding: 3rem 4.5rem 3.25rem;
+    padding: 2rem 1.5625rem 0.75rem;
     display: block;
 
     color: colors.$gray-400;
@@ -12,9 +12,11 @@
     }
 
     &__top {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
       justify-content: space-between;
     }
 

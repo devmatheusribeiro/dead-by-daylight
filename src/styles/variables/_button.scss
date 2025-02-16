@@ -29,17 +29,33 @@
 
 .btn-md {
   display: block;
-  padding: 1.125rem 3rem;
+  padding: 0.75rem 2.5rem;
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1rem;
   width: fit-content;
 }
 
 .btn-lg {
   display: block;
-  padding: 1.125rem 3.687rem;
+  padding: 1rem 2.5rem;
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1rem;
   width: fit-content;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-sm {
+    padding: 0.75rem 2rem;
+  }
+  
+  .btn-md {
+    padding: 1.125rem 3rem;
+    font-size: 1.25rem;
+  }
+  
+  .btn-lg {
+    padding: 1.125rem 3.687rem;
+    font-size: 1.25rem;
+  }
 }
 

@@ -4,7 +4,8 @@
 
 .slide {
   width: 100%;
-  height: 100vh;
+  //height: 100vh;
+  height: 30vh;
   position: relative;
 }
 
@@ -18,8 +19,10 @@
   top: 0;
 
   .control {
-    width: 4.1875rem;
-    height: 4.1875rem;
+    //width: 4.1875rem;
+    //height: 4.1875rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     z-index: 1;
 
@@ -28,7 +31,7 @@
     justify-content: center;
 
     svg {
-        height: 2.5rem;
+        height: 1.5rem;
         position: relative;
     }
   }
@@ -36,7 +39,8 @@
 
 .control-previous {
   left: 0;
-  margin-left: 2rem;
+  //margin-left: 2rem;
+  margin-left: 1rem;
   svg {
       left: -4px;
   }
@@ -46,10 +50,12 @@
   right: 0;
   top: 0;
   bottom: 0;
-  margin-right: 2rem;
+  //margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .caption {
   display: block;
-  margin-top: 2.75rem;
+  // margin-top: 2.75rem;
+  margin-top: 0.75rem;
 }

@@ -34,6 +34,7 @@ export class CharactersComponent {
   protected fetchMaps(itemActive: CharacterType): void {
     this.itemActive.set(itemActive)
     this.svgColor.set(itemActive == CharacterType.ASSASSIN ?  '#80080A' : '#0866B0')
+    this.isLoaded = false
 
     this.contentService.fetchData<ICharacters[]>('characters', { role: itemActive })
       .subscribe({

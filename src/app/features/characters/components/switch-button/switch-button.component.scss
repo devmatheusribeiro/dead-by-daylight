@@ -1,29 +1,38 @@
 @use '../../../../../styles/variables/colors' as colors;
 
 .switch-wrapper {
-  width: fit-content;
+  // width: fit-content;
+  width: 100%;
 
   display: flex;
 
   .btn {
     color: colors.$neutral-white;
     border: 1px solid colors.$gray-500;
+    width: 100%;
+  }
 
-    &.active {
+  &__left {
+    width: 100%;
+    .btn:not(.active) {
+      border-right: none;
+    }
+
+    .btn.active {
       background-color: colors.$primary-red;
       border-color: colors.$primary-red;
     }
   }
 
-  &__left {
-    .btn:not(.active) {
-      border-right: none;
-    }
-  }
-
   &__right {
+    width: 100%;
     .btn:not(.active) {
       border-left: none;
+    }
+
+    .btn.active {
+      background-color: colors.$primary-blue;
+      border-color: colors.$primary-blue;
     }
   }
 }

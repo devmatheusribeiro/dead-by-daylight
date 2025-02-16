@@ -42,7 +42,6 @@ input, button, textarea, select {
   line-height: inherit;
 }
 
-
 table {
   border-collapse: collapse;
   width: 100%;
@@ -61,4 +60,23 @@ h1, h2, h3, h4, h5, h6 {
 body {
   color: colors.$neutral-white;
   background-color: colors.$gray-900;
+}
+
+.container {
+  width: 100%;
+  padding: 16px;
+  max-width: 1440px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
 }

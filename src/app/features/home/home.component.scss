@@ -3,7 +3,8 @@
 .page {
   .page-wrapper {
     height: 100%;
-    margin: 0 4.5rem;
+    //margin: 0 4.5rem;
+    margin: 0 1.5625rem;
 
     &__left {
       display: flex;
@@ -21,13 +22,13 @@
   .page-title {
     max-width: 100%;
     overflow: hidden;
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 
-    // img {
-    //   width: 100%;
-    //   height: auto;
-    //   display: block;
-    // }
+    img {
+      height: 60px;
+      display: block;
+    }
   }
 
   .page-subtitle {
@@ -35,6 +36,8 @@
   }
 
   .miniature {
+    display: none;
+
     width: 18rem;
     height: 11rem;
     margin-bottom: 2.5rem;
@@ -49,31 +52,49 @@
 }
 
 .hero {
-  height: 100vh;
+  //height: 100vh;
+  height: 55vh;
   background-image: url('https://ik.imagekit.io/mnbb48o/images/banners/banner-topo-home.jpeg?updatedAt=1736896883455');
-  background-size: 120%;
-  background-position: center;
+  //background-size: 120%;
+  //background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: 0%;
-  background-position-y: 0%;
+  //background-position-x: 0%;
+  //background-position-y: 0%;
+  background-position: center;
 
   .page-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 45%;
+    padding-bottom: 2rem;
+    // display: grid;
+    // grid-template-columns: 1fr 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    .pay-link {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
 .platforms {
   display: block;
-  margin: 4rem 0 6.75rem;
+  //margin: 4rem 0 6.75rem;
+  margin: 2.5rem 0 4.5625rem;
 
   .page-wrapper {
-    display: grid;
+    //display: grid;
+    //grid-template-columns: 50% 50%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    grid-template-columns: 50% 50%;
   }
 
   .list {
+    margin-top: 1.25rem;
+
     display: flex;
     align-items: center;
     column-gap: 1.5rem;
@@ -87,13 +108,11 @@
 }
 
 .role {
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
   display: block;
 
   .page-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.5rem;
+    display: block;
 
     &__left {
       display: flex;
@@ -108,8 +127,9 @@
 
   .card {
     width: 100%;
-    margin-bottom: 4rem;
-    height: 35rem;
+    margin-bottom: 3rem;
+    //height: 35rem;
+    height: 26rem;
     display: block;
 
     position: relative;
@@ -122,11 +142,15 @@
       justify-content: center;
       .icon {
         position: absolute;
-        top: -2.75rem;
-        right: -2.375rem;
+        //top: -2.75rem;
+        top: -1rem;
+        //right: -2.375rem;
+        right: 0;
         z-index: 1;
-        width: 7.75rem;
-        height: 7.75rem;
+        //width: 7.75rem;
+        //height: 7.75rem;
+        width: 4.75rem;
+        height: 4.75rem;
       }
     }
 
@@ -135,11 +159,14 @@
       column-gap: 1.5rem;
 
       position: absolute;
-      bottom: -6.875rem;
+      bottom: 0;
+      //width: calc(100% + 2.75rem);
+      width: 100%;
 
       .character-image {
-        width: 19rem;
-        height: 26.8125rem;
+        width: 100%;
+        //height: 26.8125rem;
+        height: 14rem;
         display: block;
         position: relative;
       }
@@ -148,36 +175,41 @@
 
   .role-card-left {
     background-image: url("https://ik.imagekit.io/mnbb48o/images/png/fundo_assasino.jpeg?updatedAt=1736896859588");
-    .body {
-      left: -2.5rem;
-    }
+    // .body {
+    // left: -2.5rem;
+    // }
   }
 
   .role-card-right {
+    margin-bottom: 2rem;
+    //margin-top: 1rem;
     background-image: url("https://ik.imagekit.io/mnbb48o/images/png/fundo_sobrevivente.jpeg?updatedAt=1736896859737");
-    .body {
-      right: -2.5rem;
-    }
+    // .body {
+    //   right: -2.5rem;
+    // }
   }
 
   .role-footer {
-    margin-top: 9rem;
+    //margin-top: 9rem;
+    margin-top: 0rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    row-gap: 4rem;
+    row-gap: 2rem;
   }
 }
 
 .maps {
-  margin-bottom: 8rem;
+  // margin-bottom: 8rem;
+  margin-bottom: 4rem;
   display: block;
 
   .header {
-    margin-bottom: 6.3rem;
+    //margin-bottom: 6.3rem;
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -200,7 +232,7 @@
 }
 
 .play-now {
-  height: 100vh;
+  height: 55vh;
   background-image: url("https://ik.imagekit.io/mnbb48o/images/banners/banner-jogue-hoje.jpeg?updatedAt=1736896883000");
   background-size: cover;
   background-position: center;
@@ -209,7 +241,8 @@
   .page-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    //align-items: flex-start;
+    align-items: center;
     justify-content: center
   }
 
@@ -239,10 +272,15 @@
   }
 }
 
-@media screen and (max-width: 990px) {
-  .page {
+@media screen and (min-width: 960px) {
+  .role {
+    margin-bottom: 8rem;
+    display: block;
+  
     .page-wrapper {
-      margin: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.5rem;
     }
   }
 }

@@ -18,13 +18,19 @@
     <div class="page-wrapper">
       <h2 class="title display-lg font-semi-bold">{{ config[itemActive()]?.title }}</h2>
       <div class="page-wrapper__list">
-        <dbd-characters-list [data]="data()"></dbd-characters-list>
+        @defer (when isLoaded) {
+          <dbd-characters-list [data]="data()"></dbd-characters-list>
+        } @loading (minimum 1s) {
+          <div class="loading-wrapper">
+            <img ngSrc="images/svg/logo.svg" alt="" class="loading-image" width="250" height="250">
+          </div>
+        }
       </div>
     </div>
   </section>
   <section class="play-now">
     <div class="page-wrapper">
-      <h2 class="display-3xl font-semi-bold">Jogue Dead By <br />Daylight hoje</h2>
+      <h2 class="display-3xl font-semi-bold title">Jogue Dead By <br />Daylight hoje</h2>
       <ul class="list">
         <li class="list-item">
           <span class="icon">

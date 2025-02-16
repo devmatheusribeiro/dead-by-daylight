@@ -3,9 +3,11 @@
 .page {
   .page-wrapper {
     height: 100%;
-    margin: 0 4.5rem;
+    margin: 0 1.5625rem;
 
     &__left {
+      width: 100%;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -21,7 +23,8 @@
   .page-title {
     max-width: 100%;
     overflow: hidden;
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     img {
       width: 100%;
@@ -32,14 +35,21 @@
 }
 
 .hero {
-  height: 100vh;
+  // height: 100vh;
+  height: 45vh;
   background-size: cover;
-  background-position: center;
+  background-position-x: right;
+  background-position-y: 10px ;
   background-repeat: no-repeat;
 
   .page-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 45%;
+    margin: 0 1.5625rem;
+        // display: grid;
+    // grid-template-columns: 1fr 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   &.killer-banner {
@@ -53,37 +63,43 @@
   .switch-wrapper {
     display: flex;
     flex-direction: column;
-    row-gap: 2.75rem;
+    // row-gap: 2.75rem;
+    row-gap: 1.25rem;
 
     .field-wrapper {
       position: relative;
       width: 100%;
-      max-width: 386px;
+      // max-width: 386px;
     }
   }
 }
 
 .listing {
-  margin-top: 4rem;
-  margin-bottom: 5rem;
+  // margin-top: 4rem;
+  // margin-bottom: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 
   .title {
-    margin-bottom: 3.1875rem;
+    // margin-bottom: 3.1875rem;
+    margin-bottom: 2.1875rem;
     display: block;
   }
 }
 
 .play-now {
-  height: 100vh;
-  background-image: url("https://ik.imagekit.io/mnbb48o/images/banners/banner-jogue-hoje.jpeg");
+  height: 55vh;
+  background-image: url("https://ik.imagekit.io/mnbb48o/images/banners/banner-jogue-hoje.jpeg?updatedAt=1736896883000");
   background-size: cover;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: center;
   background-repeat: no-repeat;
 
   .page-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    //align-items: flex-start;
+    align-items: center;
     justify-content: center
   }
 
@@ -107,8 +123,8 @@
         width: 18px;
         height: 18px;
         display: block;
+        position: relative;
       }
     }
   }
 }
-
