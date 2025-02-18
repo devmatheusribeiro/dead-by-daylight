@@ -1,4 +1,4 @@
-@use '../../../styles/variables/colors' as colors;
+@use "../../../styles/variables/colors" as colors;
 
 .page {
   .page-wrapper {
@@ -32,7 +32,7 @@
   }
 
   .page-subtitle {
-   margin-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .miniature {
@@ -54,7 +54,7 @@
 .hero {
   //height: 100vh;
   height: 55vh;
-  background-image: url('https://ik.imagekit.io/mnbb48o/images/banners/banner-topo-home.jpeg?updatedAt=1736896883455');
+  background-image: url("https://ik.imagekit.io/mnbb48o/images/banners/banner-topo-home.jpeg?updatedAt=1736896883455");
   //background-size: 120%;
   //background-position: center;
   background-size: cover;
@@ -243,7 +243,7 @@
     flex-direction: column;
     //align-items: flex-start;
     align-items: center;
-    justify-content: center
+    justify-content: center;
   }
 
   .title {
@@ -251,10 +251,10 @@
   }
 
   .list {
-   margin-bottom: 1.8rem;
-   display: flex;
-   flex-direction: column;
-   row-gap: 1.5rem;
+    margin-bottom: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
 
     .list-item {
       display: flex;
@@ -272,19 +272,225 @@
   }
 }
 
-@media screen and (min-width: 960px) {
-  .role {
-    margin-bottom: 8rem;
-    display: block;
-  
+@media screen and (min-width: 768px) {
+  .page {
+    .page-wrapper {
+      margin: 0 2.5rem;
+    }
+  }
+
+  .hero {
+    height: 72vh;
+
+    .page-wrapper {
+      .page-title {
+        img {
+          height: 80px;
+        }
+      }
+
+      .page-subtitle {
+        text-align: center;
+      }
+    }
+  }
+
+  .platforms {
     .page-wrapper {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 1.5rem;
+      grid-template-columns: 50% 50%;
+
+      .list {
+        column-gap: 1rem;
+      }
+    }
+  }
+
+  .role {
+    .card {
+      height: 36rem;
+
+      .header {
+        .icon {
+          width: 6rem;
+          height: 6rem;
+        }
+      }
+
+      .body {
+        .character-image {
+          height: 26rem;
+        }
+      }
+    }
+  }
+
+  .play-now {
+    height: 70vh;
+
+    .page-wrapper {
+      align-items: flex-start;
+    }
+
+    .list {
+      row-gap: 0.75rem;
     }
   }
 }
 
+@media screen and (min-width: 996px) {
+  .page {
+    .page-wrapper {
+      margin: 0 4.5rem;
+      padding-bottom: 0;
+      align-items: normal;
+    }
+
+    .miniature {
+      display: block;
+      width: 18rem;
+      height: 11rem;
+      margin-bottom: 2.5rem;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+
+  .hero {
+    height: 100vh;
+    background-size: 120%;
+    background-position: center;
+    background-position-x: 0%;
+    background-position-y: 0%;
+
+    .page-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 45%;
+
+      .page-title {
+        margin-bottom: 2rem;
+        max-width: 100%;
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+
+      .page-subtitle {
+        text-align: start;
+      }
+
+      .pay-link {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .platforms {
+    margin: 4rem 0 6.75rem;
+
+    .page-wrapper {
+      align-items: center;
+    }
+
+    .list {
+      column-gap: 1.5rem;
+    }
+  }
+
+  .role {
+    margin-bottom: 8rem;
+
+    .page-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.5rem;
+
+      &__left {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: normal;
+      }
+    }
+
+    .card {
+      height: 35rem;
+
+      .header {
+        .icon {
+          top: -2.75rem;
+          right: -2.375rem;
+          width: 7.75rem;
+          height: 7.75rem;
+        }
+      }
+
+      .body {
+        width: calc(100% + 2.75rem);
+        bottom: -6.875rem;
+
+        .character-image {
+          height: 26.8125rem;
+        }
+      }
+    }
+
+    .role-card-left {
+      .body {
+        left: -2.7rem;
+      }
+    }
+
+    .role-card-right {
+      margin-bottom: normal;
+      .body {
+        right: -2.7rem;
+      }
+    }
+
+    .role-footer {
+      margin-top: 9rem;
+      row-gap: 4rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .maps {
+    margin-bottom: 8rem;
+
+    .header {
+      margin-bottom: 6.3rem;
+    }
+  }
+
+  .play-now {
+    height: 100vh;
+    background-position: center;
+
+    .page-wrapper {
+      align-items: flex-start;
+    }
+
+    .title {
+      margin-bottom: 1.8rem;
+    }
+  }
+}
 
 @keyframes pulse {
   0% {

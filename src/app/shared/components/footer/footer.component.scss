@@ -45,3 +45,29 @@
       }
     }
   }
+
+  @media screen and (min-width: 768px) {
+    .footer-wrapper {
+      padding: 2rem 2.5rem 2.25rem;
+
+      &__top {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .warning {
+        width: 22rem;
+        height: 4rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 996px) {
+    .footer-wrapper {
+      padding: 3rem 4.5rem 1rem;
+
+      &__top {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }

@@ -1,4 +1,4 @@
-@use './colors' as colors;
+@use "./colors" as colors;
 
 @mixin button-style() {
   border: none;
@@ -14,7 +14,7 @@
   color: colors.$neutral-white;
   background-color: colors.$primary-red;
   width: fit-content;
-  transition: all .3s;
+  transition: all 0.3s;
 
   &:hover {
     background-color: colors.$dark-red;
@@ -44,18 +44,25 @@
 }
 
 @media screen and (min-width: 768px) {
-  .btn-sm {
-    padding: 0.75rem 2rem;
+  .btn-md {
+    padding: 0.75rem 3rem;
+    font-size: 1.25rem;
   }
-  
+
+  .btn-lg {
+    padding: 0.75rem 3.687rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 996px) {
   .btn-md {
     padding: 1.125rem 3rem;
     font-size: 1.25rem;
   }
-  
+
   .btn-lg {
     padding: 1.125rem 3.687rem;
     font-size: 1.25rem;
   }
 }
-

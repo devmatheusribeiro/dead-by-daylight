@@ -17,6 +17,6 @@ export class ContentService {
       });
     }
 
-    return this.http.get<T>(`http://192.168.1.9:3000/${path}`, { params: httpParams });
+    return this.http.get<T>(`http://192.168.1.17:3000/${path}`, { params: httpParams });
   }
 }

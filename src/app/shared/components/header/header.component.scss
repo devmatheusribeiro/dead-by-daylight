@@ -10,17 +10,25 @@
     margin: 0 4.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    //justify-content: space-between;
+    justify-content: center;
 
-    .header-wrapper__player-link {
+    &__right  {
       display: none;
     }
   }
-
 }
 
-@media screen and (min-width: 960px) {
-  .header-wrapper__player-link {
-    display: block;
+@media screen and (min-width: 996px) {
+  .header {
+    height: 84px;
+
+    .header-wrapper {
+      justify-content: space-between;
+
+      &__right  {
+        display: block;
+      }
+    }
   }
 }

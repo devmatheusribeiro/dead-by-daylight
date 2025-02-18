@@ -3,7 +3,11 @@
     <div class="header-wrapper__left">
       <div class="header-wrapper__logo">
         <a [routerLink]="'/'" aria-label="voltar para a página inicial">
-          <img ngSrc="images/svg/text-logo.svg?updatedAt=1736896859472" alt="" width="300" height="25" priority>
+          @if (isTextLogo()) {
+            <img ngSrc="images/svg/text-logo.svg?updatedAt=1736896859472" alt="" width="300" height="25" priority>
+          } @else {
+            <img ngSrc="images/png/icon-logo.png?updatedAt=1736896860148" alt="" width="70" height="25" priority>
+          }
         </a>
       </div>
     </div>
