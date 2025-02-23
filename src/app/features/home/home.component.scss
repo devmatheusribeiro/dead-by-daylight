@@ -1,9 +1,9 @@
 @use "../../../styles/variables/colors" as colors;
+@use "../../../styles/animations.scss" as animations;
 
 .page {
   .page-wrapper {
     height: 100%;
-    //margin: 0 4.5rem;
     margin: 0 1.5625rem;
 
     &__left {
@@ -22,7 +22,6 @@
   .page-title {
     max-width: 100%;
     overflow: hidden;
-    // margin-bottom: 2rem;
     margin-bottom: 1.5rem;
 
     img {
@@ -52,21 +51,14 @@
 }
 
 .hero {
-  //height: 100vh;
   height: 55vh;
   background-image: url("https://ik.imagekit.io/mnbb48o/images/banners/banner-topo-home.jpeg?updatedAt=1736896883455");
-  //background-size: 120%;
-  //background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  //background-position-x: 0%;
-  //background-position-y: 0%;
   background-position: center;
 
   .page-wrapper {
     padding-bottom: 2rem;
-    // display: grid;
-    // grid-template-columns: 1fr 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,12 +73,9 @@
 
 .platforms {
   display: block;
-  //margin: 4rem 0 6.75rem;
   margin: 2.5rem 0 4.5625rem;
 
   .page-wrapper {
-    //display: grid;
-    //grid-template-columns: 50% 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,7 +117,6 @@
   .card {
     width: 100%;
     margin-bottom: 3rem;
-    //height: 35rem;
     height: 26rem;
     display: block;
 
@@ -142,13 +130,9 @@
       justify-content: center;
       .icon {
         position: absolute;
-        //top: -2.75rem;
         top: -1rem;
-        //right: -2.375rem;
         right: 0;
         z-index: 1;
-        //width: 7.75rem;
-        //height: 7.75rem;
         width: 4.75rem;
         height: 4.75rem;
       }
@@ -160,12 +144,10 @@
 
       position: absolute;
       bottom: 0;
-      //width: calc(100% + 2.75rem);
       width: 100%;
 
       .character-image {
         width: 100%;
-        //height: 26.8125rem;
         height: 14rem;
         display: block;
         position: relative;
@@ -175,22 +157,14 @@
 
   .role-card-left {
     background-image: url("https://ik.imagekit.io/mnbb48o/images/png/fundo_assasino.jpeg?updatedAt=1736896859588");
-    // .body {
-    // left: -2.5rem;
-    // }
   }
 
   .role-card-right {
     margin-bottom: 2rem;
-    //margin-top: 1rem;
     background-image: url("https://ik.imagekit.io/mnbb48o/images/png/fundo_sobrevivente.jpeg?updatedAt=1736896859737");
-    // .body {
-    //   right: -2.5rem;
-    // }
   }
 
   .role-footer {
-    //margin-top: 9rem;
     margin-top: 0rem;
 
     display: flex;
@@ -203,12 +177,10 @@
 }
 
 .maps {
-  // margin-bottom: 8rem;
   margin-bottom: 4rem;
   display: block;
 
   .header {
-    //margin-bottom: 6.3rem;
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
@@ -220,13 +192,14 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 25vh;
     background-color: colors.$gray-900;
   }
 
   .loading-image {
-    width: 250px;
-    height: 250px;
+    width: 120px;
+    height: 150px;
+
     animation: pulse 2s infinite;
   }
 }
@@ -241,7 +214,6 @@
   .page-wrapper {
     display: flex;
     flex-direction: column;
-    //align-items: flex-start;
     align-items: center;
     justify-content: center;
   }
@@ -254,7 +226,7 @@
     margin-bottom: 1.8rem;
     display: flex;
     flex-direction: column;
-    row-gap: 1.5rem;
+    row-gap: 0.75rem;
 
     .list-item {
       display: flex;
@@ -362,10 +334,10 @@
 
   .hero {
     height: 100vh;
-    background-size: 120%;
+    background-size: 110%;
     background-position: center;
-    background-position-x: 0%;
-    background-position-y: 0%;
+    background-position-x: 0;
+    background-position-y: 0;
 
     .page-wrapper {
       display: grid;
@@ -471,8 +443,7 @@
   }
 
   .maps {
-    height: 100vh;
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
 
     .header {
       margin-bottom: 4.5rem;
@@ -481,6 +452,14 @@
     .body {
       display: flex;
       justify-content: center;
+    }
+
+    .loading-wrapper {
+      height: 100vh;
+    }
+
+    .loading-image {
+      width: 250px;
     }
   }
 
@@ -498,14 +477,22 @@
   }
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
+@media screen and (min-width: 1400px) {
+  .hero {
+    max-height: 720px;
+    background-size: auto;
+
+    .page-wrapper {
+      .page-title {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 1.5rem;
+
+        img {
+          width: auto;
+          max-height: 200px;
+        }
+      }
+    }
   }
 }
