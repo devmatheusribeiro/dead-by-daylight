@@ -70,7 +70,7 @@
 }
 
 .listing {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   margin-bottom: 3rem;
 
   .title {
@@ -83,12 +83,12 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 25vh;
+    height: 30vh;
     background-color: colors.$gray-900;
   }
 
   .loading-image {
-    width: 120px;
+    width: 130px;
     height: 150px;
     animation: pulse 2s infinite;
   }
