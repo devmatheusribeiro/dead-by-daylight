@@ -471,10 +471,16 @@
   }
 
   .maps {
-    margin-bottom: 8rem;
+    height: 100vh;
+    margin-bottom: 10rem;
 
     .header {
-      margin-bottom: 6.3rem;
+      margin-bottom: 4.5rem;
+    }
+
+    .body {
+      display: flex;
+      justify-content: center;
     }
   }
 

@@ -2,7 +2,7 @@ import { Component, signal, WritableSignal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ContentService } from '../../shared/services';
 import { SliderComponent } from '../../shared/components';
-import { IMaps } from './interface/maps.interface';
+import { IMaps as IArenas } from './interface/maps.interface';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -12,7 +12,7 @@ import { NgOptimizedImage } from '@angular/common';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  protected data: WritableSignal<IMaps[]> = signal(null)
+  protected data: WritableSignal<IArenas[]> = signal(null)
   protected isLoaded = false
 
   ngOnInit(): void {
@@ -22,7 +22,7 @@ export class HomeComponent {
   constructor(private contentService: ContentService) { }
 
   private fetchMaps() {
-    this.contentService.fetchData<IMaps[]>('maps')
+    this.contentService.fetchData<IArenas[]>('arenas')
       .subscribe({
         next: (response) => {
           this.data.set(response)

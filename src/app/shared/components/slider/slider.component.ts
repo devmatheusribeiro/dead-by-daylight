@@ -4,7 +4,7 @@ import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'dbd-slider',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss'
 })

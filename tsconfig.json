@@ -18,7 +18,10 @@
     "target": "ES2022",
     "module": "ES2022",
     "strictPropertyInitialization": false,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "paths": {
+     "@env": ["./src/environments/environment.ts"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

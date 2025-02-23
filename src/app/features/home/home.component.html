@@ -99,13 +99,15 @@
       <div class="header">
         <h2 class="display-3xl font-semi-bold">Explore mais de 15 mapas de arrepiar</h2>
       </div>
-      @defer (when isLoaded) {
-        <dbd-slider [data]="data()"></dbd-slider>
-      } @loading (minimum 1s) {
-        <div class="loading-wrapper">
-          <img ngSrc="images/svg/logo.svg" alt="" class="loading-image" width="250" height="250">
-        </div>
-      }
+      <div class="body">
+        @defer (when isLoaded) {
+          <dbd-slider [data]="data()"></dbd-slider>
+        } @loading (minimum 1s) {
+          <div class="loading-wrapper">
+            <img ngSrc="images/svg/logo.svg" alt="" class="loading-image" width="250" height="250">
+          </div>
+        }
+       </div>
     </div>
   </section>
   <section class="play-now">

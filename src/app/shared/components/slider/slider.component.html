@@ -9,7 +9,7 @@
       </button>
     </div>
     <div class="slide">
-      <img [ngSrc]="slideItem().image" [alt]="slideItem().name" fill>
+      <img [src]="slideItem().image.url" [alt]="slideItem().name" fill>
     </div>
     <div class="control-wrapper control-next">
       <button class="control btn-primary" aria-label="próximo slide" (click)="handleNext()">

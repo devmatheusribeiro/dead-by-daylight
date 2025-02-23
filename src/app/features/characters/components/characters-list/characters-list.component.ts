@@ -4,7 +4,7 @@ import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'dbd-characters-list',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './characters-list.component.html',
   styleUrl: './characters-list.component.scss'
 })

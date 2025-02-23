@@ -1,8 +1,7 @@
 @use '../../../../styles/variables/colors' as colors;
 
 .header {
-  //height: 84px;
-  height: 50px;
+  height: 55px;
   background-color: rgba(colors.$gray-800, 0.5);
 
   .header-wrapper {
@@ -10,7 +9,6 @@
     margin: 0 4.5rem;
     display: flex;
     align-items: center;
-    //justify-content: space-between;
     justify-content: center;
 
     &__right  {
