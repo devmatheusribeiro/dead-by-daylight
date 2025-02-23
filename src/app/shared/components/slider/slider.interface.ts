@@ -1,6 +1,6 @@
 import { Image } from "../../interfaces/image.interface"
 
-export interface ISlider {
+export interface Slider {
   id: number
   name: string
   image: Image

@@ -15,7 +15,7 @@
           equipe de quatro sobreviventes astutos trabalhando juntos para escapar.
         </div>
         <div class="pay-link">
-          <a href="/" class="btn-primary btn-lg">Compre o jogo principal</a>
+          <a href="https://deadbydaylight.com/pt-br/" target="_blank" class="btn-primary btn-lg">Compre o jogo principal</a>
         </div>
       </div>
       <div class="page-wrapper__right">
@@ -100,8 +100,14 @@
         <h2 class="display-3xl font-semi-bold">Explore mais de 15 mapas de arrepiar</h2>
       </div>
       <div class="body">
-        @defer (when isLoaded) {
-          <dbd-slider [data]="data()"></dbd-slider>
+        @defer {
+          @if (isLoaded) {
+            <dbd-slider [data]="data()"></dbd-slider>
+          } @else {
+            <div class="loading-wrapper">
+              <img src="https://ik.imagekit.io/mnbb48o/images/svg/logo.svg" alt="" class="loading-image" width="250" height="250">
+            </div>
+          }
         } @loading (minimum 1s) {
           <div class="loading-wrapper">
             <img ngSrc="images/svg/logo.svg" alt="" class="loading-image" width="250" height="250">
@@ -134,7 +140,7 @@
         </li>
       </ul>
       <div class="page-wrapper__pay-link">
-        <a href="/" class="btn-primary btn-lg">Adquirir agora</a>
+        <a href="https://deadbydaylight.com/pt-br/" target="_blank" class="btn-primary btn-lg">Adquirir agora</a>
       </div>
     </div>
   </section>

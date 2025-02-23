@@ -1,3 +1,3 @@
-import { ISlider } from "../../../shared/components/slider/slider.interface";
+import { Slider } from "../../../shared/components/slider/slider.interface";
 
-export interface IMaps extends ISlider {}
+export interface IMaps extends Slider {}

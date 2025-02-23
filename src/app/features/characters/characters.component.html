@@ -18,11 +18,17 @@
     <div class="page-wrapper">
       <h2 class="title display-lg font-semi-bold">{{ config[itemActive()]?.title }}</h2>
       <div class="page-wrapper__list">
-        @defer (when isLoaded) {
-          <dbd-characters-list [data]="data()"></dbd-characters-list>
+        @defer {
+          @if (isLoaded) {
+            <dbd-characters-list [data]="data()"></dbd-characters-list>
+          } @else {
+            <div class="loading-wrapper">
+              <img src="https://ik.imagekit.io/mnbb48o/images/svg/logo.svg" alt="" class="loading-image" width="250" height="250">
+            </div>
+          }
         } @loading (minimum 1s) {
           <div class="loading-wrapper">
-            <img ngSrc="images/svg/logo.svg" alt="" class="loading-image" width="250" height="250">
+            <img src="https://ik.imagekit.io/mnbb48o/images/svg/logo.svg" alt="" class="loading-image" width="250" height="250">
           </div>
         }
       </div>
@@ -65,7 +71,7 @@
         </li>
       </ul>
       <div class="page-wrapper__pay-link">
-        <a href="/" class="btn-primary btn-lg">Adquirir agora</a>
+        <a href="https://deadbydaylight.com/pt-br/" target="_blank" class="btn-primary btn-lg">Adquirir agora</a>
       </div>
     </div>
   </section>

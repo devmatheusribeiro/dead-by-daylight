@@ -2,7 +2,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component, signal, WritableSignal } from '@angular/core';
 import { SwitchButtonComponent, SearchInputComponent, CharactersListComponent } from './components';
 import { ContentService } from '../../shared/services';
-import { ICharacters } from './interface/characters.interface';
+import { Characters } from './interface/characters.interface';
 import { CharacterType } from './enums';
 import { CHARACTER_CONFIG, CharacterConfig } from './configurations/charactes.config';
 import { FormsModule } from '@angular/forms';
@@ -15,7 +15,7 @@ import { debounce } from '../../shared/decorators';
   styleUrl: './characters.component.scss'
 })
 export class CharactersComponent {
-  protected data: WritableSignal<ICharacters[]> = signal([])
+  protected data: WritableSignal<Characters[]> = signal([])
   protected itemActive: WritableSignal<CharacterType> = signal(CharacterType.ASSASSIN)
   protected config: { [key: string]: CharacterConfig } = CHARACTER_CONFIG
   protected search: string = ''
@@ -23,7 +23,7 @@ export class CharactersComponent {
   protected svgColor: WritableSignal<string> = signal('#0866B0')
   protected isLoaded = false
 
-  private baseData: ICharacters[] = []
+  private baseData: Characters[] = []
 
   ngOnInit(): void {
     this.fetchMaps(CharacterType.ASSASSIN)
@@ -36,7 +36,7 @@ export class CharactersComponent {
     this.svgColor.set(itemActive == CharacterType.ASSASSIN ?  '#80080A' : '#0866B0')
     this.isLoaded = false
 
-    this.contentService.fetchData<ICharacters[]>('characters', { role: itemActive })
+    this.contentService.fetchData<Characters[]>('characters', { role: itemActive })
       .subscribe({
         next: (response) => {
           this.baseData = response

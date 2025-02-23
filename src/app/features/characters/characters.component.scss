@@ -1,4 +1,5 @@
 @use "../../../styles/variables/colors" as colors;
+@use "../../../styles/animations.scss" as animations;
 
 .page {
   .page-wrapper {
@@ -23,7 +24,6 @@
   .page-title {
     max-width: 100%;
     overflow: hidden;
-    // margin-bottom: 2rem;
     margin-bottom: 1rem;
 
     img {
@@ -35,7 +35,6 @@
 }
 
 .hero {
-  // height: 100vh;
   height: 45vh;
   background-size: cover;
   background-position-x: right;
@@ -44,8 +43,6 @@
 
   .page-wrapper {
     margin: 0 1.5625rem;
-    // display: grid;
-    // grid-template-columns: 1fr 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,27 +60,37 @@
   .switch-wrapper {
     display: flex;
     flex-direction: column;
-    // row-gap: 2.75rem;
     row-gap: 1.25rem;
 
     .field-wrapper {
       position: relative;
       width: 100%;
-      // max-width: 386px;
     }
   }
 }
 
 .listing {
-  // margin-top: 4rem;
-  // margin-bottom: 5rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
 
   .title {
-    // margin-bottom: 3.1875rem;
     margin-bottom: 2.1875rem;
     display: block;
+  }
+
+  .loading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25vh;
+    background-color: colors.$gray-900;
+  }
+
+  .loading-image {
+    width: 120px;
+    height: 150px;
+    animation: pulse 2s infinite;
   }
 }
 
@@ -98,7 +105,6 @@
   .page-wrapper {
     display: flex;
     flex-direction: column;
-    //align-items: flex-start;
     align-items: center;
     justify-content: center;
   }
@@ -111,7 +117,7 @@
     margin-bottom: 1.8rem;
     display: flex;
     flex-direction: column;
-    row-gap: 1.5rem;
+    row-gap: 0.75rem;
 
     .list-item {
       display: flex;
@@ -192,6 +198,14 @@
     .title {
       margin-bottom: 3.1875rem;
     }
+
+    .loading-wrapper {
+      height: 100vh;
+    }
+
+    .loading-image {
+      width: 250px;
+    }
   }
 
   .play-now {
@@ -205,5 +219,11 @@
     .title {
       margin-bottom: 1.8rem;
     }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .hero {
+    max-height: 750px;
   }
 }

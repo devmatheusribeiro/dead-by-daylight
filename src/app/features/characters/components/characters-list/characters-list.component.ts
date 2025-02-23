@@ -1,5 +1,5 @@
 import { Component, input, SimpleChanges } from '@angular/core';
-import { ICharacters } from '../../interface/characters.interface';
+import { Characters } from '../../interface/characters.interface';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -9,7 +9,7 @@ import { NgOptimizedImage } from '@angular/common';
   styleUrl: './characters-list.component.scss'
 })
 export class CharactersListComponent {
-  data = input<ICharacters[]>([])
+  data = input<Characters[]>([])
 
   ngonChanges(changes: SimpleChanges) {
     console.log(this.data())

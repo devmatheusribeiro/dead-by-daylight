@@ -1,5 +1,5 @@
-import { IEnvironment } from "./interfaces/environment.interface";
+import { Environment } from "./interfaces/environment.interface";
 
-export const environment: IEnvironment = {
+export const environment: Environment = {
   currentUrl: 'http://localhost:8080/api/'
 };

@@ -1,13 +1,13 @@
 import { Image } from "../../../shared/interfaces/image.interface"
 
-export interface ICharacters {
+export interface Characters {
   id: string
   name: string
-  role: IRole
+  role: Role
   image: Image
 }
 
-export interface IRole {
+export interface Role {
   id: string
   name: string
 }
